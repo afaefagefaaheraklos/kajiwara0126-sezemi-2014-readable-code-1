@@ -1,28 +1,21 @@
+# coding: utf-8
 
-	
-def display_recipe():
-	print("ome-rice")
+def display_recipes_with_id(recipes):
+	Id = 0
+	for recipe in recipes:
+		print( Id, recipe.rstrip() )
+		Id += 1
 
-def display_reccipe_from_file():
-	recipe_name = open('recipe-data.txt')
-	print(recipe_name.read, end="")
-	recipe_name.close()
-
-def display_recipes_from_file():
-	recipes_name = open('recipes-data.txt')
-	print(recipes_name.read, end="")
-	recipes_name.close()
+def display_target_recipe(recipes, Id):
+	Id = int(Id)
+	print( Id, recipes[Id].rstrip() )
 
 if __name__ == "__main__":
-	spec = input("select the spec you want to use > ")
-	if spec == 1:
-		display_recipe()
-	elif spec == 3:
-		diplay_recipe_from_file()
-	elif spec == 4:
-		display_recipes_from_file():
-	
+	file_name = input( "input file_name > " )
+	recipes   = open( file_name, "r" ).readlines()
+
+	uniq_id = input("input recipe id (0, 1, ...) > ")
+	if(uniq_id == ""):
+		display_recipes_with_id(recipes)
 	else:
-		pass
-	
-	
+		display_target_recipe(recipes, uniq_id)

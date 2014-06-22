@@ -1,25 +1,26 @@
 kajiwara0126-sezemi-2014-readable-code-1
 ===================================
 
+# For Use
+使い方
 
-* display_recipe function
-this function is designed to display recipe of ome-rice.
+```
+$ python cookpad_assignment.py
+input the file_name, you want to use > recipes-data.txt
+input the id, you want to show (first == 0) > 
+>>> 0 ome-rice
+>>> 1 oyako-don
+>>> 2 annin-tofu
 
-how to use display_recipe function(spec1).
+$ python cookpad_assignment.py
+input the file_name, you want to use > recipes-data.txt
+input the id, you want to show (first == 0) > 1
+>>> 1 oyako-don
+```
 
-1. type the following command 
-$ python display_recipe.py
+# File Format
+ファイルの形について
 
-2, if you can see the following result, you`ve succeeded 
-	ome-rice
-
-* display_recipe_from_file function
-this function reads the ome-rice`s recipe file from the repository.
-
-how to use display_recipe function(spec3)
-1. type the following command
-$ python display_recipe_from_file.py
-
-2. if you can see the following result, you`ve succeeded
-	ome-rice
-
+ome-rice
+oyako-don
+annin-tofu
