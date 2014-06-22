@@ -11,10 +11,10 @@ def display_target_recipe(recipes, Id):
 	print( Id, recipes[Id].rstrip() )
 
 if __name__ == "__main__":
-	file_name = input( "input the file_name, you want to use > " )
+	file_name = input( "input file_name > " )
 	recipes   = open( file_name, "r" ).readlines()
 
-	uniq_id = input("input the id, you want to show (first == 0) > ")
+	uniq_id = input("input recipe id (0, 1, ...) > ")
 	if(uniq_id == ""):
 		display_recipes_with_id(recipes)
 	else:
